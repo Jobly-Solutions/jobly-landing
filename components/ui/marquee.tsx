@@ -16,6 +16,6 @@ const Marquee: React.FC<MarqueeProps> = ({ className, reverse, pauseOnHover, chi
     </div>
   );
 };
-
+ 
 export default Marquee;
 
