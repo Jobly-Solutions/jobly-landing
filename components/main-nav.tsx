@@ -12,7 +12,7 @@ import { Menu } from 'lucide-react'
 
 const navItems = [
   { href: "/", label: "Inicio" },
-  { href: "/pymes", label: "Pymes" },
+  //{ href: "/pymes", label: "Pymes" },
   { href: "/talento", label: "Talento" },
 ]
 

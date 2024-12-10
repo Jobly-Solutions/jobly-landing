@@ -2,7 +2,7 @@
 
 import React, { forwardRef, useRef } from "react";
 import Image from "next/image";
-import { User, MessageCircle, Building2 } from 'lucide-react';
+import { User, Building2 } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 
@@ -25,27 +25,6 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
-const Icons = {
-  googleDrive: () => (
-    <svg className="h-7 w-7" viewBox="0 0 87.3 78">
-      <path
-        d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"
-        fill="#0066da"
-      />
-      <path
-        d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0-1.2 4.5h27.5z"
-        fill="#00ac47"
-      />
-      <path
-        d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z"
-        fill="#ea4335"
-      />
-    </svg>
-  ),
-  blank: () => (
-    <div className="h-7 w-7 rounded-full bg-gray-100" />
-  ),
-};
 
 export function IntegrationDiagram() {
   const containerRef = useRef<HTMLDivElement>(null);

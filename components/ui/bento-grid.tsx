@@ -35,7 +35,7 @@ const BentoCard = ({
   name: string;
   className: string;
   background: ReactNode;
-  Icon: any;
+  Icon: YourType[];
   description: string;
   href: string;
   cta: string;

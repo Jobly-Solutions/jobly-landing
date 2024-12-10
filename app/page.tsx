@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { GradientText } from "@/components/gradient-text"
-import { ConnectionSection } from "@/components/connection-section"
 import { SectionNav } from "@/components/section-nav"
 import { SectionHeader } from "@/components/section-header"
 import { TimelineSection } from "@/components/timeline-section"
@@ -221,7 +220,7 @@ export default function Home() {
           <SectionHeader
             badge="Planes Flexibles"
             title="Planes de Precios"
-            description="Encuentra el plan perfecto para tu startup"
+            description="Encuentra el plan perfecto para tu startup "
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -287,9 +286,16 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button className={`w-full ${index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'} text-white`}>
-                      Seleccionar Plan
-                    </Button>
+                    <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
+  <Button
+    className={`w-full ${
+      index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'
+    } text-white`}
+  >
+    Seleccionar Plan
+  </Button>
+</a>
+
                   </CardContent>
                 </Card>
               </motion.div>

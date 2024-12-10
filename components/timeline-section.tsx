@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, ChevronRight } from 'lucide-react'
+import { Check  } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { SectionHeader } from "@/components/section-header"
 
