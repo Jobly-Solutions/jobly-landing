@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface Item {
   title: string;
   description: string;
