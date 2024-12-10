@@ -188,11 +188,13 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 {testimonial.image ? (
-                  <img
-                    src={testimonial.image}
-                    alt={`Foto de ${testimonial.name}`}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                   <Image
+                   src={testimonial.image}
+                   alt={`Foto de ${testimonial.name}`}
+                   width={48}
+                   height={48}
+                   className="rounded-full object-cover"
+                 />
                 ) : (
                   <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
                     <span className="text-xl font-bold text-blue-600">
