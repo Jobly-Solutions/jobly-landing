@@ -12,6 +12,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { MainNav } from "@/components/main-nav"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { CompanyCarousel } from "@/components/company-carousel"
+import { FloatingJobs } from "@/components/floating-jobs"
+
 
 export default function TalentoPage() {
   return (
@@ -62,9 +64,7 @@ export default function TalentoPage() {
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
               {/* Placeholder for FloatingJobs component */}
-              <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                <span className="text-gray-600">Floating Jobs Visualization</span>
-              </div>
+              <FloatingJobs />  
             </motion.div>
           </div>
         </div>
