@@ -78,7 +78,7 @@ export default function TalentoPage() {
               { icon: Users, label: "Profesionales Tech", value: 5000, suffix: "+" },
               { icon: Clock, label: "Tiempo Promedio de Contratación", value: 48, suffix: "h" },
               { icon: Zap, label: "Tasa de Éxito", value: 95, suffix: "%" },
-              { icon: Briefcase, label: "Proyectos promedios por Joblyers", value: 12, suffix: "" }
+              { icon: Briefcase, label: "Proyectos promedios por Joblyers", value: 12, prefix: "", suffix: "" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
