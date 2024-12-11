@@ -48,6 +48,7 @@ export default function Home() {
                 Talento tecnológico validado on-demand, en tiempo récord y a un menor costo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                   Incorporar Talento
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -312,18 +313,18 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Guía para contratar desarrolladores remotos",
-                  description: "Aprende las mejores prácticas para encontrar y gestionar talento tecnológico a distancia.",
+                  title: "El futuro del trabajo on-demand",
+                  description: "Cómo el modelo on-demand está revolucionando el trabajo en startups.",
                   image: "/images/blog-1.jpg"
                 },
                 {
-                  title: "Cómo escalar tu equipo de forma eficiente",
+                  title: "Garantías legales de la modalidad on-demand en Jobly",
                   description: "Estrategias para crecer tu startup sin comprometer la calidad o la cultura.",
                   image: "/images/blog-2.jpg"
                 },
                 {
-                  title: "Tendencias tecnológicas para 2024",
-                  description: "Descubre las habilidades más demandadas en el mercado tecnológico actual.",
+                  title: "Talento on-demand: el aliado perfecto para startups",
+                  description: "Lográ más con menos contratando talento validado y flexible.",
                   image: "/images/blog-3.jpg"
                 }
               ].map((post, index) => (
