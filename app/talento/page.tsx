@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Flame, Users, Clock, Zap, DollarSign, Target, GraduationCap, Rocket, Globe, Wallet, Briefcase, Palette, BarChart, Quote } from 'lucide-react'
+import { ArrowRight, Flame, Users, Clock, Zap, Briefcase, Target, GraduationCap, Rocket, Globe, Wallet, Palette, BarChart, Quote } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -12,8 +12,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { MainNav } from "@/components/main-nav"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { CompanyCarousel } from "@/components/company-carousel"
-import { FloatingJobs } from "@/components/floating-jobs"
-
 
 export default function TalentoPage() {
   return (
@@ -64,14 +62,9 @@ export default function TalentoPage() {
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
               {/* Placeholder for FloatingJobs component */}
-              <motion.div 
-            className="w-full lg:w-1/2"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          >
-            <FloatingJobs />
-          </motion.div>
+              <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
+                <span className="text-gray-600">Floating Jobs Visualization</span>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -115,7 +108,7 @@ export default function TalentoPage() {
               Proceso Simple y Efectivo
             </Badge>
             <h2 className="text-3xl font-bold mb-4">
-              4 pasos para unirte al top 3% del talento tech
+              4 pasos para unirte al top 10% del talento tech
             </h2>
             <p className="text-gray-600">
               Nuestro proceso está diseñado para identificar y potenciar a los mejores profesionales del sector tecnológico
@@ -330,7 +323,7 @@ export default function TalentoPage() {
               Ventajas Únicas
             </Badge>
             <h2 className="text-3xl font-bold mb-4">
-              Beneficios de ser parte del top 3%
+              Beneficios de ser parte del top 10%
             </h2>
             <p className="text-gray-600">
               Disfruta de ventajas exclusivas diseñadas para potenciar tu carrera y bienestar profesional
