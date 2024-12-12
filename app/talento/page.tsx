@@ -267,21 +267,21 @@ export default function TalentoPage() {
                 role: "Fullstack Developer",
                 company: "Balcami",
                 quote: "Lo que más me gusta de Jobly es la buena onda! Desde el primer día me sentí cómoda y acompañada. Además, siento que no solo importa lo que hago, sino también cómo me siento mientras tanto. Saber que tengo un equipo que me respalda y me entiende hace una gran diferencia.",
-                image: "/images/ana-rodriguez.jpg"
+                image: "https://media.licdn.com/dms/image/v2/C4E03AQE5XUFP82wm2Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1628559051971?e=1739404800&v=beta&t=LZrJPvgYO06cC--zFDfW17HEzlt7rLjcOg7Jh6gjapw"
               },
               {
                 name: "Axel Joaquín Torletti",
                 role: "Fullstack Developer",
                 company: "Mentalgram, Aston & Zelaya",
                 quote: "Lo que más valoro de formar parte de Jobly es lo acompañado que me sentí desde el inicio, la claridad y honestidad en todos los procesos, y la comunicación y seguimiento de principio a fin durante la propuesta laboral.",
-                image: "/images/carlos-mendoza.jpg"
+                image: "https://media.licdn.com/dms/image/v2/D5603AQG_TVwOc_Akbg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1682345150087?e=1739404800&v=beta&t=53WQ9WyqKfx7JYxibc9wg9tpW1utyxje1tXx1zWV8dA"
               },
               {
                 name: "Amalia",
-                role: "UX/UI Designer",
-                company: "DesignCo",
+                role: "Project Manager",
+                company: "Hashi",
                 quote: "De Jobly quiero destacar el acompañamiento que he recibido a lo largo de todo el proceso laboral, desde la selección hasta finalizar el contrato, en todo momento hubo buena predisposición.",
-                image: "/images/laura-gomez.jpg"
+                image: "https://media.licdn.com/dms/image/v2/C4E03AQHOHzYzCfbH6w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617255852622?e=1739404800&v=beta&t=u5Q33JGMFqnmDeaUKy8hmxgCNkhInHsvA2tTPjydfaw"
               }
             ].map((testimonial, index) => (
               <motion.div
