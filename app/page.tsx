@@ -16,8 +16,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { MainNav } from "@/components/main-nav"
 import { FloatingProfiles } from "@/components/floating-profiles"
 import { BenefitsSection } from "@/components/benefits-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { CTASection } from "@/components/cta-section"
+
 
 export default function Home() {
   return (
