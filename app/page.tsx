@@ -1,11 +1,9 @@
 "use client"
 
 import React from 'react'
-import Image from "next/image"
 import { motion } from 'framer-motion'
 import { ArrowRight, Flame, Zap, Users, Clock, CheckCircle2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { GradientText } from "@/components/gradient-text"
 import { SectionNav } from "@/components/section-nav"
@@ -15,6 +13,10 @@ import { CompanyCarousel } from "@/components/company-carousel"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { MainNav } from "@/components/main-nav"
 import { FloatingProfiles } from "@/components/floating-profiles"
+import { BenefitsSection } from "@/components/benefits-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { Card, CardContent } from "@/components/ui/card"; // Import Card and CardContent
+import { CTASection } from "@/components/cta-section"
 
 export default function Home() {
   return (
@@ -48,7 +50,6 @@ export default function Home() {
                 Talento tecnológico validado on-demand, en tiempo récord y a un menor costo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                   Incorporar Talento
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -79,169 +80,39 @@ export default function Home() {
       {/* Trusted Companies Section */}
       <section className="py-24 bg-gradient-to-b from-blue-50/80 to-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">Startups que usan Jobly</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">Empresas que confían en nosotros</h2>
           <CompanyCarousel />
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <SectionHeader
-            badge="¿Por qué elegirnos?"
-            title="La mejor forma de incorporar talento tech"
-            description="Descubre cómo Jobly puede ayudarte a encontrar el talento perfecto para tu empresa"
-          />
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Talento Validado",
-                description: "Accede a más de 5,000 profesionales verificados en diferentes áreas tecnológicas."
-              },
-              {
-                icon: Clock,
-                title: "Tiempo Récord",
-                description: "Incorpora talento en cuestión de días, no semanas o meses."
-              },
-              {
-                icon: Zap,
-                title: "Menor Costo",
-                description: "Optimiza tus recursos con nuestro modelo de contratación flexible."
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                  <CardContent className="p-6 flex flex-col items-center text-center">
-                    <div className="bg-blue-100 p-3 rounded-full mb-4">
-                      <feature.icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How it Works Section */}
-      <section id="how-it-works">
-        
+      <BenefitsSection />
+      
       <TimelineSection />
-      </section>
-
-      {/* Testimonials Section */}
-<section id="testimonials" className="py-24 bg-blue-600 text-white">
-  <div className="container mx-auto px-4">
-    <SectionHeader
-      title="Lo que dicen los founders"
-      description="Historias de éxito de startups que ya confían en Jobly"
-      className="text-white [&>p]:text-blue-100"
-    />
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          name: "Gonzalo Waisman",
-          role: "CEO, Hashi",
-          quote:
-            "Jobly nos ayudó a encontrar el talento perfecto para impulsar nuestro crecimiento.",
-          image: "https://media.licdn.com/dms/image/v2/D4E03AQHIZYiXsEvuOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1731698850547?e=1738800000&v=beta&t=2i-e578IDTD9P_mWdkyYbGqUslcMg9If3V0r7keWrmI", // URL de la imagen
-        },
-        {
-          name: "Sebastian Rinaldi",
-          role: "CEO, ChatsappAI",
-          quote:
-            "La calidad de los profesionales de Jobly es excepcional. Han transformado nuestro equipo.",
-          image: "https://media.licdn.com/dms/image/v2/D4D03AQH6NtNLb2gy1g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718836469881?e=1738800000&v=beta&t=pVPoJh6uyHNr3IVNK1fhxGHFmNEBT-rRve-J4J6Bz9U", // URL de la imagen
-        },
-        {
-          name: "Agustina Wende",
-          role: "CEO, Mentalgram",
-          quote:
-            "La agilidad y calidad de Jobly son incomparables. Ahora nuestro equipo está completo.",
-          image: "https://media.licdn.com/dms/image/v2/D4D03AQE2IJmW9_6NVg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1714047473483?e=1738800000&v=beta&t=XiWrKvgC3W1yt3yhlhxF8ve-8FRqssy5nLK88AjVPBY", // No se proporciona una imagen
-        },
-      ].map((testimonial, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <Card className="bg-white text-gray-900 h-full">
-            <CardContent className="p-6 flex flex-col h-full">
-              <div className="flex-grow">
-                <svg
-                  className="w-8 h-8 text-blue-600 mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                >
-                  <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                </svg>
-                <p className="text-gray-600 mb-6 italic">{testimonial.quote}</p>
-              </div>
-              <div className="flex items-center gap-4">
-                {testimonial.image ? (
-                   <Image
-                   src={testimonial.image}
-                   alt={`Foto de ${testimonial.name}`}
-                   width={48}
-                   height={48}
-                   className="rounded-full object-cover"
-                 />
-                ) : (
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                    <span className="text-xl font-bold text-blue-600">
-                      {testimonial.name[0]}
-                    </span>
-                  </div>
-                )}
-                <div>
-                  <p className="font-medium text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      
+      <TestimonialsSection />
+      
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeader
             badge="Planes Flexibles"
             title="Planes de Precios"
-            description="Encuentra el plan perfecto para tu startup "
+            description="Encuentra el plan perfecto para tu startup"
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 name: "Starter",
-                price: 600,
                 description: "Perfecto para startups en etapa inicial",
                 features: [
                   "Hasta 1 candidato técnico especializado",
                   "Gestión completa de pagos, contratos y recursos humanos",
                   "Soporte en la integración del candidato",
                   "Cancelación en cualquier momento"
-
                 ]
               },
               {
                 name: "Plus",
-                price: 1000,
                 description: "Ideal para startups en crecimiento",
                 features: [
                   "Hasta 2 candidatos técnicos especializados",
@@ -249,12 +120,10 @@ export default function Home() {
                   "Soporte durante el primer mes para la adaptación del equipo",
                   "Reportes de rendimiento y seguimiento continuo",
                   "Cancelación en cualquier momento"
-
                 ]
               },
               {
                 name: "Business",
-                price: "Personalizado",
                 description: "Para startups con equipos y proyectos complejos",
                 features: [
                   "Desde 3 candidatos técnicos especializados",
@@ -262,8 +131,7 @@ export default function Home() {
                   "Proceso de selección avanzado con pruebas personalizadas",
                   "Seguimiento y reportes continuos",
                   "Soporte continuo para asegurar la integración fluida del equipo",
-                  "Cancelación en cualquier momentos"
-
+                  "Cancelación en cualquier momento"
                 ]
               }
             ].map((plan, index) => (
@@ -276,10 +144,6 @@ export default function Home() {
                 <Card className={`border-2 ${index === 1 ? 'border-blue-400 shadow-lg' : 'border-gray-200'}`}>
                   <CardContent className="p-6">
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    <div className="text-3xl font-bold mb-4">
-                      {plan.price === "Personalizado" ? plan.price : `$${plan.price}`}
-                      {plan.price !== "Personalizado" && <span className="text-lg font-normal text-gray-600">/mes</span>}
-                    </div>
                     <p className="text-gray-600 mb-6">{plan.description}</p>
                     <ul className="space-y-2 mb-6">
                       {plan.features.map((feature, featureIndex) => (
@@ -290,15 +154,14 @@ export default function Home() {
                       ))}
                     </ul>
                     <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
-  <Button
-    className={`w-full ${
-      index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'
-    } text-white`}
-  >
-    Seleccionar Plan
-  </Button>
-</a>
-
+                      <Button
+                        className={`w-full ${
+                          index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'
+                        } text-white`}
+                      >
+                        Seleccionar Plan
+                      </Button>
+                    </a>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -306,101 +169,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Recursos para Startups</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "El futuro del trabajo on-demand",
-                  description: "Cómo el modelo on-demand está revolucionando el trabajo en startups.",
-                  image: "/images/blog-1.jpg"
-                },
-                {
-                  title: "Garantías legales de la modalidad on-demand en Jobly",
-                  description: "Estrategias para crecer tu startup sin comprometer la calidad o la cultura.",
-                  image: "/images/blog-2.jpg"
-                },
-                {
-                  title: "Talento on-demand: el aliado perfecto para startups",
-                  description: "Lográ más con menos contratando talento validado y flexible.",
-                  image: "/images/blog-3.jpg"
-                }
-              ].map((post, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width={400}
-                      height={200}
-                      className="w-full h-48 object-cover"
-                    />
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                      <p className="text-gray-600 mb-4">{post.description}</p>
-                      <Button variant="outline" className="w-full">
-                        Leer más
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>  
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <SectionHeader
-            badge="Soporte"
-            title="Preguntas Frecuentes"
-            description="Encuentra respuestas a las preguntas más comunes"
-          />
-          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-            {[
-              {
-                question: "¿Cómo funciona el proceso de contratación?",
-                answer: "Definimos tus necesidades, te presentamos candidatos en 48 horas, y tú eliges al mejor. Simple y rápido."
-              },
-              {
-                question: "¿Qué tipo de talento puedo encontrar en Jobly?",
-                answer: "Ofrecemos una amplia gama de profesionales tech, desde desarrolladores hasta diseñadores UX/UI y data scientists."
-              },
-              {
-                question: "¿Cuánto tiempo toma incorporar a un nuevo miembro del equipo?",
-                answer: "Con Jobly, puedes tener un nuevo miembro en tu equipo en cuestión de días, no semanas o meses."
-              }
-            ].map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">¿Listo para potenciar tu equipo?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Únete a cientos de empresas que ya confían en Jobly para escalar sus equipos de manera eficiente.
-          </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-            Incorporar Talento
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-        </div>
-      </section>
+      
+      <CTASection />
     </div>
   )
 }
