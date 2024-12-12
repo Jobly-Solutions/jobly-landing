@@ -57,17 +57,15 @@ export function FloatingJobs() {
   }
 
   return (
-    <div className="relative w-full h-[640px]">
+    <div className="relative w-full h-auto md:h-[640px] grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
       {jobs.map((job, index) => (
         <motion.div
           key={job.id}
-          className="absolute"
+          className="w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ 
             opacity: 1, 
-            y: 0,
-            x: `${(index % 2) * 340}px`,
-            top: `${Math.floor(index / 2) * 260}px`
+            y: 0
           }}
           transition={{
             duration: 0.5,
@@ -80,7 +78,7 @@ export function FloatingJobs() {
             }
           }}
         >
-          <div className="bg-white rounded-lg shadow-md p-7 w-[320px]">
+          <div className="bg-white rounded-lg shadow-md p-4 md:p-7 w-full md:w-[320px] mx-auto">
             <div className="flex items-start gap-4 mb-4">
               <div className={`w-12 h-12 rounded-lg ${job.letterBg} flex items-center justify-center text-white font-medium text-xl`}>
                 {job.letter}
@@ -93,7 +91,7 @@ export function FloatingJobs() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-1 md:gap-2 mb-4">
               {job.skills.map((skill) => (
                 <Badge
                   key={skill}
@@ -107,7 +105,7 @@ export function FloatingJobs() {
             <Button
               onClick={() => handleApply(job.id)}
               disabled={appliedJobs.includes(job.id)}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base"
             >
               {appliedJobs.includes(job.id) ? "Aplicación Enviada" : "Aplicar Ahora"}
             </Button>

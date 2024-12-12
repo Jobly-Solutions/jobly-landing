@@ -36,7 +36,7 @@ export default function TalentoPage() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Flame className="w-4 h-4" />
-                <span className="text-sm font-medium">Top 10% del Talento Tech en LATAM</span>
+                <span className="text-sm font-medium">Top 3% del Talento Tech en LATAM</span>
               </motion.div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Impulsa tu carrera en el{' '}
@@ -78,7 +78,7 @@ export default function TalentoPage() {
               { icon: Users, label: "Profesionales Tech", value: 5000, suffix: "+" },
               { icon: Clock, label: "Tiempo Promedio de Contratación", value: 48, suffix: "h" },
               { icon: Zap, label: "Tasa de Éxito", value: 95, suffix: "%" },
-              { icon: Briefcase, label: "Proyectos promedios por Joblyers", value: 12, prefix: "", suffix: "" }
+              { icon: Briefcase, label: "Proyectos promedios por Joblyers", value: 3, prefix: "", suffix: "" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -108,7 +108,7 @@ export default function TalentoPage() {
               Proceso Simple y Efectivo
             </Badge>
             <h2 className="text-3xl font-bold mb-4">
-              4 pasos para unirte al top 10% del talento tech
+              4 pasos para unirte al top 3% del talento tech
             </h2>
             <p className="text-gray-600">
               Nuestro proceso está diseñado para identificar y potenciar a los mejores profesionales del sector tecnológico
@@ -263,24 +263,24 @@ export default function TalentoPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Ana Rodríguez",
-                role: "Frontend Developer",
-                company: "TechStart",
-                quote: "Gracias a Jobly, encontré una oportunidad increíble en una startup innovadora. El proceso fue rápido y el equipo de Jobly me apoyó en cada paso.",
+                name: "Florencia Hnatiuk",
+                role: "Fullstack Developer",
+                company: "Balcami",
+                quote: "Lo que más me gusta de Jobly es la buena onda! Desde el primer día me sentí cómoda y acompañada. Además, siento que no solo importa lo que hago, sino también cómo me siento mientras tanto. Saber que tengo un equipo que me respalda y me entiende hace una gran diferencia.",
                 image: "/images/ana-rodriguez.jpg"
               },
               {
-                name: "Carlos Mendoza",
-                role: "Data Scientist",
-                company: "DataViz",
-                quote: "Jobly me conectó con empresas que realmente valoraban mis habilidades. Ahora estoy trabajando en proyectos desafiantes que impulsan mi crecimiento profesional.",
+                name: "Axel Joaquín Torletti",
+                role: "Fullstack Developer",
+                company: "Mentalgram, Aston & Zelaya",
+                quote: "Lo que más valoro de formar parte de Jobly es lo acompañado que me sentí desde el inicio, la claridad y honestidad en todos los procesos, y la comunicación y seguimiento de principio a fin durante la propuesta laboral.",
                 image: "/images/carlos-mendoza.jpg"
               },
               {
-                name: "Laura Gómez",
+                name: "Amalia",
                 role: "UX/UI Designer",
                 company: "DesignCo",
-                quote: "La comunidad de profesionales en Jobly es excepcional. He ampliado mi red de contactos y encontrado mentores que han acelerado mi carrera en el mundo tech.",
+                quote: "De Jobly quiero destacar el acompañamiento que he recibido a lo largo de todo el proceso laboral, desde la selección hasta finalizar el contrato, en todo momento hubo buena predisposición.",
                 image: "/images/laura-gomez.jpg"
               }
             ].map((testimonial, index) => (
@@ -323,7 +323,7 @@ export default function TalentoPage() {
               Ventajas Únicas
             </Badge>
             <h2 className="text-3xl font-bold mb-4">
-              Beneficios de ser parte del top 10%
+              Beneficios de ser parte del top 3%
             </h2>
             <p className="text-gray-600">
               Disfruta de ventajas exclusivas diseñadas para potenciar tu carrera y bienestar profesional

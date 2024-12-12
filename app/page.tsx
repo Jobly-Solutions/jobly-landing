@@ -254,10 +254,10 @@ export default function Home() {
               },
               {
                 name: "Business",
-                price: "1400",
+                price: "Personalizado",
                 description: "Para startups con equipos y proyectos complejos",
                 features: [
-                  "Hasta 3 candidatos técnicos especializados",
+                  "Desde 3 candidatos técnicos especializados",
                   "Todas las características del Plus Plan",
                   "Proceso de selección avanzado con pruebas personalizadas",
                   "Seguimiento y reportes continuos",
