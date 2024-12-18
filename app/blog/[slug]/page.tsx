@@ -1,8 +1,8 @@
 "use client"
-
+//fix!
 import React from 'react'
 import { useParams } from 'next/navigation'
-import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react'
+import { Calendar, Clock, User, Tag } from 'lucide-react'
 import { MainNav } from "@/components/main-nav"
 import { Badge } from "@/components/ui/badge"
 import { RelatedPosts } from "@/components/blog/related-posts"
