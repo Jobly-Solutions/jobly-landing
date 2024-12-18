@@ -50,10 +50,14 @@ export default function Home() {
                 Talento tecnológico validado on-demand, en tiempo récord y a un menor costo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                
+              <a href="#pricing" rel="noopener noreferrer">
+                
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                   Incorporar Talento
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
+                </a>
                 <Button size="lg" variant="outline" className="group">
                   Ver Demo
                   <Zap className="ml-2 w-4 h-4 transition-transform group-hover:rotate-12" />
@@ -254,7 +258,7 @@ export default function Home() {
       </div>
     </div>
   </section>
-          
+
 
 
       <section className="py-20 bg-white">
