@@ -47,15 +47,22 @@ export default function TalentoPage() {
                 Únete a una comunidad exclusiva de profesionales tech y conecta con las startups más disruptivas de Latinoamérica.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Aplicar Ahora
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="group">
-                  Explorar Oportunidades
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
+  {/* Botón con enlace para "Aplicar Ahora" */}
+  <a href="https://app.wearejobly.com/platform/public/register" className="no-underline">
+    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+      Aplicar Ahora
+      <ArrowRight className="ml-2 w-4 h-4" />
+    </Button>
+  </a>
+
+  {/* Botón con enlace para "Explorar Oportunidades" */}
+  <a href="https://app.wearejobly.com/platform/public/jobs" className="no-underline">
+    <Button size="lg" variant="outline" className="group">
+      Explorar Oportunidades
+      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+    </Button>
+  </a>
+</div>
             </motion.div>
             <motion.div 
               className="w-full lg:w-1/2"
@@ -457,11 +464,12 @@ export default function TalentoPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            ><a href="https://app.wearejobly.com/platform/public/jobs" className="no-underline">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
                 Comienza tu viaje con Jobly
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
+             </a>
             </motion.div>
           </div>
         </div>
