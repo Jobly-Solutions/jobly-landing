@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import confetti from 'canvas-confetti'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import confetti from 'canvas-confetti';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const profiles = [
   {
@@ -12,42 +12,46 @@ const profiles = [
     name: "Germán J.",
     role: "Fullstack Developer",
     skills: ["Python", "React", "MongoDB"],
-    color: "bg-blue-500"
+    color: "bg-blue-500",
+    image: "/images/german.jpeg", // URL de la imagen
   },
   {
     id: 2,
     name: "Valentina O.",
     role: "Diseñadora UX/UI",
     skills: ["UX/UI Design", "Figma"],
-    color: "bg-blue-500"
+    color: "bg-blue-500",
+    image: "/images/valentina.jpeg", // URL de la imagen
   },
   {
     id: 3,
     name: "Sofia B.",
     role: "Experta en Integraciones",
     skills: ["API", "Node.js", "AWS"],
-    color: "bg-blue-500"
+    color: "bg-blue-500",
+    image: "/images/sofia.jpeg", // URL de la imagen
   },
   {
     id: 4,
     name: "Carlos M.",
     role: "Data Scientist",
     skills: ["Python", "Machine Learning", "SQL"],
-    color: "bg-blue-500"
-  }
-]
+    color: "bg-blue-500",
+    image: "/images/carlos.jpeg", // URL de la imagen
+  },
+];
 
 export function FloatingProfiles() {
-  const [selectedProfile, setSelectedProfile] = useState<number | null>(null)
+  const [selectedProfile, setSelectedProfile] = useState<number | null>(null);
 
   const handleAddToTeam = (id: number) => {
-    setSelectedProfile(id)
+    setSelectedProfile(id);
     confetti({
       particleCount: 100,
       spread: 70,
-      origin: { y: 0.6 }
-    })
-  }
+      origin: { y: 0.6 },
+    });
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl mx-auto">
@@ -59,13 +63,13 @@ export function FloatingProfiles() {
           transition={{
             duration: 0.5,
             delay: index * 0.1,
-            ease: "easeOut"
+            ease: "easeOut",
           }}
           className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <motion.div 
+          <motion.div
             className="flex items-start gap-4"
             animate={{ y: [0, -5, 0] }}
             transition={{
@@ -75,9 +79,11 @@ export function FloatingProfiles() {
               ease: "easeInOut",
             }}
           >
-            <div className={`w-12 h-12 rounded-full ${profile.color} flex items-center justify-center text-white font-medium text-lg`}>
-              {profile.name[0]}
-            </div>
+            <img
+              src={profile.image}
+              alt={profile.name}
+              className="w-16 h-16 rounded-full object-cover border border-gray-300"
+            />
             <div className="flex-1">
               <h3 className="font-medium text-gray-900">{profile.name}</h3>
               <p className="text-sm text-gray-500 mb-3">{profile.role}</p>
@@ -97,13 +103,14 @@ export function FloatingProfiles() {
                 disabled={selectedProfile === profile.id}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-colors"
               >
-                {selectedProfile === profile.id ? "Agregado al equipo" : "Agregar a mi equipo"}
+                {selectedProfile === profile.id
+                  ? "Agregado al equipo"
+                  : "Agregar a mi equipo"}
               </Button>
             </div>
           </motion.div>
         </motion.div>
       ))}
     </div>
-  )
+  );
 }
-
