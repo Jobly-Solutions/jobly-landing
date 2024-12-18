@@ -1,11 +1,9 @@
 "use client"
 
 import React from 'react'
-import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react'
 import { MainNav } from "@/components/main-nav"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { RelatedPosts } from "@/components/blog/related-posts"
 import { BlogCTA } from "@/components/blog/blog-cta"

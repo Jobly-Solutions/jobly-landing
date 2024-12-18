@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import confetti from 'canvas-confetti';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import confetti from "canvas-confetti";
+import Image from "next/image"; // Importa el componente Image
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -13,7 +14,7 @@ const profiles = [
     role: "Fullstack Developer",
     skills: ["Python", "React", "MongoDB"],
     color: "bg-blue-500",
-    image: "/images/german.jpeg", // URL de la imagen
+    image: "/images/german.jpeg",
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ const profiles = [
     role: "Diseñadora UX/UI",
     skills: ["UX/UI Design", "Figma"],
     color: "bg-blue-500",
-    image: "/images/valentina.jpeg", // URL de la imagen
+    image: "/images/valentina.jpeg",
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const profiles = [
     role: "Experta en Integraciones",
     skills: ["API", "Node.js", "AWS"],
     color: "bg-blue-500",
-    image: "/images/sofia.jpeg", // URL de la imagen
+    image: "/images/sofia.jpeg",
   },
   {
     id: 4,
@@ -37,7 +38,7 @@ const profiles = [
     role: "Data Scientist",
     skills: ["Python", "Machine Learning", "SQL"],
     color: "bg-blue-500",
-    image: "/images/carlos.jpeg", // URL de la imagen
+    image: "/images/carlos.jpeg",
   },
 ];
 
@@ -79,11 +80,16 @@ export function FloatingProfiles() {
               ease: "easeInOut",
             }}
           >
-            <img
-              src={profile.image}
-              alt={profile.name}
-              className="w-16 h-16 rounded-full object-cover border border-gray-300"
-            />
+            {/* Cambié <img> por <Image> */}
+            <div className="w-16 h-16 relative rounded-full overflow-hidden border border-gray-300">
+              <Image
+                src={profile.image}
+                alt={profile.name}
+                layout="fill"
+                objectFit="cover" // Mantiene las proporciones
+                priority={index < 2} // Optimiza las primeras imágenes
+              />
+            </div>
             <div className="flex-1">
               <h3 className="font-medium text-gray-900">{profile.name}</h3>
               <p className="text-sm text-gray-500 mb-3">{profile.role}</p>
