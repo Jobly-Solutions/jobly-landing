@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "slug": "el-futuro-del-trabajo-on-demand",
+      "title": "El futuro del trabajo on-demand",
+      "excerpt": "Cómo el modelo on-demand está revolucionando el trabajo en startups.",
+      "content": "<p>El mundo del trabajo está experimentando una transformación radical, y las startups están a la vanguardia de este cambio. El modelo de trabajo on-demand, también conocido como \"gig economy\" o economía colaborativa, está redefiniendo cómo las empresas contratan talento y cómo los profesionales ofrecen sus servicios.</p><h1>¿Qué es el trabajo on-demand?</h2><p>El trabajo on-demand se refiere a un modelo en el que las empresas contratan profesionales para proyectos específicos o por períodos cortos, en lugar de emplearlos a tiempo completo. Este enfoque permite a las startups acceder a talento especializado cuando lo necesitan, sin el compromiso a largo plazo de una contratación tradicional.</p><h2>Ventajas para las startups</h2><ul><li><strong>Flexibilidad:</strong> Adaptar rápidamente el equipo según las necesidades del proyecto.</li><li><strong>Acceso a talento global:</strong> No limitarse a un mercado laboral local.</li><li><strong>Reducción de costos:</strong> Evitar gastos fijos asociados con empleados a tiempo completo.</li><li><strong>Innovación acelerada:</strong> Incorporar expertos en tecnologías emergentes de forma ágil.</li></ul><h2>El papel de plataformas como Jobly</h2><p>Plataformas especializadas como Jobly están facilitando la conexión entre startups y talento on-demand. Estas plataformas no solo simplifican el proceso de contratación, sino que también garantizan la calidad del talento y manejan aspectos administrativos como contratos y pagos.</p><h2>El futuro es on-demand</h2><p>A medida que más startups adoptan este modelo, estamos viendo un cambio en la cultura laboral hacia una mayor flexibilidad y especialización. Los profesionales, por su parte, están encontrando nuevas oportunidades para diversificar su experiencia y tener mayor control sobre su carrera.</p><p>El trabajo on-demand no es solo una tendencia pasajera, sino el futuro del trabajo en el ecosistema de startups. Las empresas que abrazen este modelo estarán mejor posicionadas para innovar, crecer y adaptarse en un mercado cada vez más dinámico y competitivo.</p>",
+      "author": "María González",
+      "date": "2024-05-15",
+      "readTime": "5 min",
+      "category": "Tendencias Laborales",
+      "image": "/images/blog-future-work.jpg",
+      "tags": ["trabajo on-demand", "startups", "innovación", "talento tech"]
+    },
+    {
+      "slug": "garantias-legales-trabajo-on-demand",
+      "title": "Garantías legales de la modalidad on-demand en Jobly",
+      "excerpt": "Estrategias para crecer tu startup sin comprometer la calidad o la cultura.",
+      "content": "...",
+      "author": "Carlos Rodríguez",
+      "date": "2024-03-10",
+      "readTime": "4 min",
+      "category": "Legal",
+      "image": "/images/blog-2.jpg",
+      "tags": ["legal", "trabajo on-demand", "garantías", "startups"]
+    },
+    {
+      "slug": "talento-on-demand-para-startups",
+      "title": "Talento on-demand: el aliado perfecto para startups",
+      "excerpt": "Lográ más con menos contratando talento validado y flexible.",
+      "content": "...",
+      "author": "Ana Martínez",
+      "date": "2024-12-05",
+      "readTime": "6 min",
+      "category": "Recursos Humanos",
+      "image": "/images/blog-3.jpg",
+      "tags": ["talento", "startups", "recursos humanos", "flexibilidad"]
+    }
+  ]
+}
+

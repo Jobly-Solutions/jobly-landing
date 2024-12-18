@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from 'framer-motion'
 import { ArrowRight, Flame, Zap, Users, Clock, CheckCircle2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -16,6 +17,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { MainNav } from "@/components/main-nav"
 import { FloatingProfiles } from "@/components/floating-profiles"
 import { BenefitsSection } from "@/components/benefits-section"
+import blogPostsData from "@/data/blog-posts.json"
 
 
 export default function Home() {
@@ -264,29 +266,13 @@ export default function Home() {
 
 
 
-      <section className="py-20 bg-white">
+  <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Recursos para Startups</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "El futuro del trabajo on-demand",
-                description: "Cómo el modelo on-demand está revolucionando el trabajo en startups.",
-                image: "/images/blog-1.jpg"
-              },
-              {
-                title: "Garantías legales de la modalidad on-demand en Jobly",
-                description: "Estrategias para crecer tu startup sin comprometer la calidad o la cultura.",
-                image: "/images/blog-2.jpg"
-              },
-              {
-                title: "Talento on-demand: el aliado perfecto para startups",
-                description: "Lográ más con menos contratando talento validado y flexible.",
-                image: "/images/blog-3.jpg"
-              }
-            ].map((post, index) => (
+            {blogPostsData.posts.slice(0, 3).map((post, index) => (
               <motion.div
-                key={index}
+                key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -301,10 +287,13 @@ export default function Home() {
                   />
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                    <p className="text-gray-600 mb-4">{post.description}</p>
-                    <Button variant="outline" className="w-full">
-                      Leer más
-                    </Button>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <Link href={`/blog/${post.slug}`} passHref>
+                      <Button variant="outline" className="w-full">
+                        Leer más
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
