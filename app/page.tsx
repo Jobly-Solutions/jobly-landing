@@ -170,83 +170,92 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <SectionHeader
-            badge="Planes Flexibles"
-            title="Planes de Precios"
-            description="Encuentra el plan perfecto para tu startup "
-          />
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Starter",
-                description: "Perfecto para startups en etapa inicial",
-                features: [
-                  "Hasta 1 candidato técnico especializado",
-                  "Gestión completa de pagos, contratos y recursos humanos",
-                  "Soporte en la integración del candidato",
-                  "Cancelación en cualquier momento"
-                ]
-              },
-              {
-                name: "Plus",
-                description: "Ideal para startups en crecimiento",
-                features: [
-                  "Hasta 2 candidatos técnicos especializados",
-                  "Todas las características del Starter Plan",
-                  "Soporte durante el primer mes para la adaptación del equipo",
-                  "Reportes de rendimiento y seguimiento continuo",
-                  "Cancelación en cualquier momento"
-                ]
-              },
-              {
-                name: "Business",
-                description: "Para startups con equipos y proyectos complejos",
-                features: [
-                  "Desde 3 candidatos técnicos especializados",
-                  "Todas las características del Plus Plan",
-                  "Proceso de selección avanzado con pruebas personalizadas",
-                  "Seguimiento y reportes continuos",
-                  "Soporte continuo para asegurar la integración fluida del equipo",
-                  "Cancelación en cualquier momento"
-                ]
-              }
-            ].map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className={`border-2 ${index === 1 ? 'border-blue-400 shadow-lg' : 'border-gray-200'}`}>
-                  <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    
-                    <p className="text-gray-600 mb-6">{plan.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle2 className="w-5 h-5 text-green-500 mr-2" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
-                      <Button
-                        className={`w-full ${
-                          index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'
-                        } text-white`}
-                      >
-                        Seleccionar Plan
-                      </Button>
-                    </a>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="container mx-auto px-4">
+      <SectionHeader
+        badge="Planes Flexibles"
+        title="Planes de Precios"
+        description="Encuentra el plan perfecto para tu startup "
+      />
+      <div className="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            name: "Starter",
+            description: "Perfecto para startups en etapa inicial",
+            price: "$599/mes",
+            features: [
+              "Hasta 1 candidato técnico especializado",
+              "Gestión completa de pagos, contratos y recursos humanos",
+              "Soporte en la integración del candidato",
+              "Cancelación en cualquier momento"
+            ]
+          },
+          {
+            name: "Plus",
+            description: "Ideal para startups en crecimiento",
+            price: "$999/mes",
+            features: [
+              "Hasta 2 candidatos técnicos especializados",
+              "Todas las características del Starter Plan",
+              "Soporte durante el primer mes para la adaptación del equipo",
+              "Reportes de rendimiento y seguimiento continuo",
+              "Cancelación en cualquier momento"
+            ]
+          },
+          {
+            name: "Business",
+            description: "Para startups con equipos y proyectos complejos",
+            price: "Personalizado",
+            features: [
+              "Desde 3 candidatos técnicos especializados",
+              "Todas las características del Plus Plan",
+              "Proceso de selección avanzado con pruebas personalizadas",
+              "Seguimiento y reportes continuos",
+              "Soporte continuo para asegurar la integración fluida del equipo",
+              "Cancelación en cualquier momento"
+            ]
+          }
+        ].map((plan, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className={`border-2 ${index === 1 ? 'border-blue-400 shadow-lg' : 'border-gray-200'}`}>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                {plan.name !== "Business" ? (
+                  <p className="text-xl font-semibold text-gray-700 mb-4">Desde {plan.price}</p>
+                ) : (
+                  <p className="text-xl font-semibold text-gray-700 mb-4">{plan.price}</p>
+                )}
+                <p className="text-gray-600 mb-6">{plan.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 mr-2" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    className={`w-full ${
+                      index === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'
+                    } text-white`}
+                  >
+                    Seleccionar Plan
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+          
+
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
