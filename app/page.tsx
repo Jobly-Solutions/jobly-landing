@@ -58,10 +58,13 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 </a>
+              <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
+
                 <Button size="lg" variant="outline" className="group">
-                  Ver Demo
+                  Agendar Demo
                   <Zap className="ml-2 w-4 h-4 transition-transform group-hover:rotate-12" />
                 </Button>
+               </a>
               </div>
               <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 max-w-xl mx-auto lg:mx-0">
                 <StatsCard icon={Users} label="Profesionales" value={5000} />
