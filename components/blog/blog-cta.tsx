@@ -10,10 +10,12 @@ export function BlogCTA() {
         <p className="text-xl mb-6">
           Descubre cómo Jobly puede ayudarte a encontrar el talento perfecto para tu startup.
         </p>
+        <a href="https://calendar.app.google/oo8ULpzbejJBvv987" target="_blank" rel="noopener noreferrer">
         <Button size="lg" variant="secondary">
           Comienza ahora
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
+        </a>
       </div>
     </section>
   )
