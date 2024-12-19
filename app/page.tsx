@@ -190,7 +190,7 @@ export default function Home() {
           {
             name: "Starter",
             description: "Perfecto para startups en etapa inicial",
-            price: "$599/mes",
+           // price: "$599/mes",
             features: [
               "Hasta 1 candidato técnico especializado",
               "Gestión completa de pagos, contratos y recursos humanos",
@@ -201,7 +201,7 @@ export default function Home() {
           {
             name: "Plus",
             description: "Ideal para startups en crecimiento",
-            price: "$999/mes",
+            //price: "$999/mes",
             features: [
               "Hasta 2 candidatos técnicos especializados",
               "Todas las características del Starter Plan",
@@ -233,11 +233,7 @@ export default function Home() {
             <Card className={`border-2 ${index === 1 ? 'border-blue-400 shadow-lg' : 'border-gray-200'}`}>
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                {plan.name !== "Business" ? (
-                  <p className="text-xl font-semibold text-gray-700 mb-4">Desde {plan.price}</p>
-                ) : (
-                  <p className="text-xl font-semibold text-gray-700 mb-4">{plan.price}</p>
-                )}
+                
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, featureIndex) => (
